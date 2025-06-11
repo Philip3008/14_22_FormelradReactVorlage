@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import {useState} from "react";
+=======
+import '../css/mvp.css';
+>>>>>>> featureSimpleStyling
 import formelrad from "../image/formelradelektronik.gif";
 import InputField from "../formular/InputField";
 
@@ -11,6 +15,7 @@ export default function Formelrad() {
 
     return (
         <>
+<<<<<<< HEAD
             <h2>Formelrad</h2>
             <img src={formelrad} width="200" alt="Formelrad"/>
             <form>
@@ -19,6 +24,26 @@ export default function Formelrad() {
                 <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
                 <button type="submit">Calculate</button>
             </form>
+=======
+            <section>
+                <header>
+                    <h2>Formelrad</h2>
+                    <img src={formelrad} width="200" alt="Formelrad"/>
+                </header>
+                <form>
+                    <div>
+                        <label>Spannung</label><input></input>
+                    </div>
+                    <div>
+                        <label>Strom</label><input></input>
+                    </div>
+                    <div>
+                        <label>Widerstand</label><input></input>
+                    </div>
+                    <button type="submit">Calculate</button>
+                </form>
+            </section>
+>>>>>>> featureSimpleStyling
         </>
     )
 }
