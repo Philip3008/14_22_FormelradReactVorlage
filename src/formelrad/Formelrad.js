@@ -70,7 +70,7 @@ export default function Formelrad() {
                 colorP: "red"
             }));
         }
-        setMessage("Calculation done.");
+        setMessage("Calculation done. Please verify results.");
     }
 
     const clear = () => {
