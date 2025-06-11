@@ -8,7 +8,8 @@ export default function Formelrad() {
         u: 10,
         i: 2,
         r: "",
-        p: ""
+        p: "",
+        message: ""
     })
 
     const handleSubmit = (event) => {
@@ -55,6 +56,7 @@ export default function Formelrad() {
                     <InputField color={"black"} value={values.r} label="Widerstand" handleChange={e => {setValues(values => ({...values, r: e.target.value}))}} />
                     <InputField color={"black"} value={values.p} label="Leistung" handleChange={e => {setValues(values => ({...values, p: e.target.value}))}} />
                     <button type="submit">Calculate</button>
+                    <p>{values.message}</p>
                 </form>
             </section>
         </>
