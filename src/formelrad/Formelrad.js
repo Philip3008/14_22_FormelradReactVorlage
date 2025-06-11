@@ -16,6 +16,7 @@ export default function Formelrad() {
     })
 
     const [message, setMessage] = useState("");
+    const [messageColor, setMessageColor] = useState("black");
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -71,6 +72,7 @@ export default function Formelrad() {
             }));
         }
         setMessage("Calculation done. Please verify results.");
+        setMessageColor("red");
     }
 
     const clear = () => {
@@ -85,6 +87,7 @@ export default function Formelrad() {
             colorP: "black"
         });
         setMessage("");
+        setMessageColor("black");
     }
 
     return (
@@ -101,7 +104,7 @@ export default function Formelrad() {
                     <InputField color={values.colorP} value={values.p} label="Leistung" handleChange={e => {setValues(values => ({...values, p: e.target.value, colorP: "black"}))}} />
                     <button type="submit">Calculate</button>
                     <button type="button" onClick={clear}>Clear</button>
-                    <p>{message}</p>
+                    <p style={{color: messageColor}}>{message}</p>
                 </form>
             </section>
         </>
